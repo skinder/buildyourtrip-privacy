@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BuildYourTrip — Plan trips & split costs, privately</title>
+<meta name="description" content="BuildYourTrip is a private, on-device travel planner for iPhone and iPad. Paste a booking email to auto-fill your itinerary, split costs with friends, and see everything on a timeline and map.">
+<meta property="og:title" content="BuildYourTrip">
+<meta property="og:description" content="Plan trips and split costs — private and on-device.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1c1c1e;
+    --muted: #6b6b70;
+    --card: #f5f5f7;
+    --border: rgba(0,0,0,0.08);
+    --accent: #0a66ff;
+    --accent-fg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --fg: #e5e5ea;
+      --muted: #8e8e93;
+      --card: #1c1c1e;
+      --border: rgba(255,255,255,0.12);
+      --accent: #6ca8ff;
+      --accent-fg: #00122e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* Hero */
+  header.hero { text-align: center; padding: 4rem 0 2.5rem; }
+  .appicon {
+    width: 88px; height: 88px; border-radius: 20px;
+    background: linear-gradient(160deg, #4aa3ff, #0a66ff);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 2.6rem; box-shadow: 0 10px 30px rgba(10,102,255,0.35);
+    margin-bottom: 1.25rem;
+  }
+  h1 { font-size: 2.6rem; line-height: 1.1; margin: 0 0 0.5rem; letter-spacing: -0.02em; }
+  .tagline { font-size: 1.25rem; color: var(--muted); margin: 0 auto 1.75rem; max-width: 32ch; }
+  .cta {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--accent); color: var(--accent-fg);
+    text-decoration: none; font-weight: 600;
+    padding: 0.8rem 1.5rem; border-radius: 980px; font-size: 1.05rem;
+  }
+  .cta:hover { opacity: 0.9; }
+  .cta-note { display: block; margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted); }
+
+  /* Screenshots */
+  .shots {
+    display: flex; gap: 1rem; overflow-x: auto;
+    padding: 1.5rem 1.25rem 2rem; scroll-snap-type: x mandatory;
+    justify-content: flex-start;
+  }
+  .shots img {
+    width: 240px; flex: 0 0 auto; border-radius: 22px;
+    border: 1px solid var(--border); scroll-snap-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+  @media (min-width: 820px) { .shots { justify-content: center; overflow-x: visible; } }
+
+  /* Features */
+  section { padding: 2.5rem 0; }
+  h2 { font-size: 1.7rem; text-align: center; margin: 0 0 2rem; letter-spacing: -0.01em; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .feature {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 1.4rem;
+  }
+  .feature .emoji { font-size: 1.6rem; }
+  .feature h3 { margin: 0.6rem 0 0.3rem; font-size: 1.1rem; }
+  .feature p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+
+  /* Privacy band */
+  .band {
+    background: var(--card); border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border); text-align: center;
+  }
+  .band p { max-width: 46ch; margin: 0.5rem auto 0; color: var(--muted); }
+
+  footer { text-align: center; padding: 2.5rem 0 3.5rem; font-size: 0.9rem; color: var(--muted); }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="appicon" aria-hidden="true">🧳</div>
+      <h1>BuildYourTrip</h1>
+      <p class="tagline">Plan every trip and split the costs — private, and entirely on your device.</p>
+      <a class="cta" href="https://apps.apple.com/app/idXXXXXXXXXX">Download on the App Store</a>
+      <span class="cta-note">Free · iPhone &amp; iPad · iOS 17+</span>
+    </div>
+  </header>
+
+  <div class="shots">
+    <img src="images/01-trips.png" alt="Trips list showing Tokyo and Lisbon">
+    <img src="images/03-itinerary.png" alt="Dated itinerary timeline with flights, stays and activities">
+    <img src="images/05-add-item.png" alt="Add item screen with Paste from confirmation">
+    <img src="images/04-map.png" alt="Map with category pins across a destination">
+  </div>
+
+  <section class="wrap">
+    <h2>Everything a trip needs, in one place</h2>
+    <div class="grid">
+      <div class="feature">
+        <div class="emoji">✨</div>
+        <h3>Paste to auto-fill</h3>
+        <p>Paste a booking confirmation and BuildYourTrip reads it on-device to fill in flights, stays, times and prices for you.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">🧾</div>
+        <h3>Split costs &amp; settle up</h3>
+        <p>Add companions, mark who paid for what, and get a clear “who owes whom” — even across currencies.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">🗓️</div>
+        <h3>Timeline itinerary</h3>
+        <p>See your whole trip day by day, with check-in / check-out and departure times laid out in order.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">🗺️</div>
+        <h3>Map of your plans</h3>
+        <p>Every place you’re visiting, pinned by category so you can see how your days fit together.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">📄</div>
+        <h3>Export &amp; calendar</h3>
+        <p>Share a trip as CSV or PDF, and add any item to your calendar with a reminder in a tap.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">🔒</div>
+        <h3>Private by design</h3>
+        <p>No accounts, no servers, no tracking. Your trips stay on your device — always.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Your trips are nobody’s business but yours</h2>
+      <p>BuildYourTrip has no user accounts and collects no data. Everything you enter — bookings, prices, companions, receipts — stays on your iPhone or iPad.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <a href="https://apps.apple.com/app/idXXXXXXXXXX">App Store</a> ·
+      <a href="../support.html">Support</a> ·
+      <a href="../index.html">Privacy Policy</a>
+      <p>&copy; 2026 BuildYourTrip</p>
+    </div>
+  </footer>
+
+</body>
+</html>
