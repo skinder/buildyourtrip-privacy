@@ -93,6 +93,19 @@
   }
   .band p { max-width: 46ch; margin: 0.5rem auto 0; color: var(--muted); }
 
+  /* Support / tips */
+  .support { text-align: center; }
+  .support .sub { color: var(--muted); max-width: 44ch; margin: 0 auto 1.5rem; }
+  .tip-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+  .tip {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    text-decoration: none; font-weight: 600; font-size: 1rem;
+    padding: 0.7rem 1.4rem; border-radius: 980px;
+  }
+  .tip.bmc { background: #ffdd00; color: #0d0c22; }
+  .tip.venmo { background: #3d95ce; color: #ffffff; }
+  .tip:hover { opacity: 0.9; }
+
   footer { text-align: center; padding: 2.5rem 0 3.5rem; font-size: 0.9rem; color: var(--muted); }
   footer a { color: var(--accent); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
@@ -157,6 +170,15 @@
     <div class="wrap">
       <h2>Your trips are nobody’s business but yours</h2>
       <p>BuildYourTrip has no user accounts and collects no data. Everything you enter — bookings, prices, companions, receipts — stays on your iPhone or iPad.</p>
+    </div>
+  </section>
+
+  <section class="wrap support">
+    <h2>Enjoying the app? ☕️</h2>
+    <p class="sub">BuildYourTrip is free and made by one person. If it's saved you time on a trip, a small tip helps keep it going — with no ads and no tracking. Completely optional, and hugely appreciated.</p>
+    <div class="tip-btns">
+      <a class="tip bmc" href="https://buymeacoffee.com/eugenesk" target="_blank" rel="noopener">Buy Me a Coffee</a>
+      <a class="tip venmo" href="https://venmo.com/u/Jevgenijs-Skinderskis" target="_blank" rel="noopener">Tip with Venmo</a>
     </div>
   </section>
 
